@@ -9,10 +9,16 @@ const Countries = () => {
         .then(data=>setCountries(data))
     },[])
     return (
-        <div className='countries'>
+        <div className='countries-container'>
+            <div className='countries'>
+
             {
                 countries.map(country=><Country key={country.cca3} country={country}></Country>)
             }
+            </div>
+            <div className='count-container'>
+                <h4>Select country : </h4>
+            </div>
             
         </div>
     );
