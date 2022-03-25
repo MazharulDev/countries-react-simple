@@ -8,7 +8,7 @@ const Country = (props) => {
             <h2>{name.common}</h2>
             <p>Capital: {capital}</p>
             <h5>Population: {population}</h5>
-            <button>Select Country</button>
+            <button onClick={()=>props.addName(name.common)}>Select Country</button>
         </div>
     );
 };

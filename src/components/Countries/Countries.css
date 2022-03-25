@@ -1,8 +1,6 @@
 .countries-container{
     display: flex;
     justify-content: space-between;
-    
-    
 }
 
 .countries{
@@ -17,4 +15,10 @@
     margin-right: 20px;
     padding: 0px 60px 0px 10px;
     border-radius: 10px;
+    width: 100px;
+
+}
+.count-container h4{
+    position: sticky;
+    top: 20px;
 }

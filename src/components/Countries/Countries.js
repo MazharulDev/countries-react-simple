@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Country from '../Country/Country';
 import './Countries.css'
-const Countries = () => {
+const Countries = (props) => {
     const [countries,setCountries]=useState([]);
     useEffect(()=>{
         fetch('https://restcountries.com/v3.1/all')
@@ -13,11 +13,11 @@ const Countries = () => {
             <div className='countries'>
 
             {
-                countries.map(country=><Country key={country.cca3} country={country}></Country>)
+                countries.map(country=><Country key={country.cca3} country={country} addName={props.addName}></Country>)
             }
             </div>
             <div className='count-container'>
-                <h4>Select country : </h4>
+                <h4>Select country: {props.name+' '} </h4>
             </div>
             
         </div>
